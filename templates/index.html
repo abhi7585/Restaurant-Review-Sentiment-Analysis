@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sentiment Analysis</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      html {
+        height: 100%;
+      }
+
+      body {
+        height: 100%;
+        font-family: Arial;
+        margin: 0;
+      }
+
+      form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      form textarea {
+        width: 500px;
+        height: 150px;
+        border-radius: 3px;
+        border-color: red;
+        padding: 2px 10px;
+        box-sizing: border-box;
+        min-width: 300px;
+        margin-top: 29px;
+        font-size: 16px;
+      }
+
+      form button {
+        width: 90px;
+        height: 38px;
+        margin-top: 20px;
+        border-color: coral;
+        background-color: antiquewhite;
+      }
+
+      form button:hover {
+        width: 90px;
+        height: 38px;
+        margin-top: 20px;
+        border-color: coral;
+        background-color: #e2661d;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+          0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      .container {
+        height: 100%;
+      }
+
+      .fa {
+        padding: 8px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 12px 10px;
+        margin-top: 23px;
+      }
+
+      .fa-twitter {
+        background: #55acee;
+        color: white;
+      }
+
+      .fa-google {
+        background: #dd4b39;
+        color: white;
+      }
+
+      .fa-linkedin {
+        background: #007bb5;
+        color: white;
+      }
+
+      .fa-github {
+        background: black;
+        color: white;
+      }
+
+      .header {
+        height: 124px;
+        margin-top: 0;
+        padding: 36px;
+        text-align: center;
+        background: #197278;
+        color: white;
+        font-size: 25px;
+      }
+      /* Page Content */
+      .content {
+        padding: 20px;
+        background: #edddd4;
+        height: calc(100% - 402px);
+      }
+
+      .footer {
+        background-color: #283d3b;
+        height: 165px;
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        text-align: center;
+      }
+
+      .predict {
+        margin-top: 42px;
+        font-size: 25px;
+        text-align: center;
+      }
+
+      .copyright {
+        margin-top: 16px;
+        bottom: 0;
+        color: white;
+        background-color: black;
+        box-sizing: border-box;
+        padding: 31px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Sentiment Analysis of Reviews</h1>
+      </div>
+      <div class="content">
+        <form action="{{ url_for('predict')}}" method="post">
+          <textarea
+            name="Review"
+            placeholder="Enter the restaurant review here..."
+            required="required"
+            cols="500"
+            rows="100"
+          ></textarea>
+
+          <button type="submit">
+            Predict
+          </button>
+        </form>
+        <div class="predict">
+          {{ prediction_text }}
+        </div>
+      </div>
+
+      <div class="footer">
+        <a
+          href="https://twitter.com/the_abhi_7585"
+          class="fa fa-twitter"
+          target="_black"
+        ></a>
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=abhi7585tripathi@gmail.com"
+          class="fa fa-google"
+          target="_black"
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/abhi7585/"
+          class="fa fa-linkedin"
+          target="_black"
+        ></a>
+        <a
+          href="https://github.com/abhi7585"
+          class="fa fa-github"
+          target="_black"
+        ></a>
+
+        <div class="copyright">
+          © 2020 Copyright: Abhishek Tripathi
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
