@@ -1,6 +1,6 @@
 # AUTOMATE DETECTION OF DIFFERENT SENTIMENTS FROM TEXTUAL COMMENTS AND FEEDBACK
 
-If you want to see the final result this is the link: 
+If you want to see the final result this is the link: https://sentiment-analysis-of-reviews.herokuapp.com/
 
 
 # Introduction
