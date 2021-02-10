@@ -194,4 +194,6 @@ Want to contribute? Great!
 Feel free to add any issues and pull request.
 
 Credits: 
-Heroku Deployement: @krishnaik06
+Heroku Deployement: @krishnaik06 Youtube Channel
+
+<h3 align="center">Show some &nbsp;❤️&nbsp; by starring this repo! </h3>
