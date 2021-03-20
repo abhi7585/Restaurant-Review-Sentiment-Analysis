@@ -6,7 +6,7 @@ nltk==3.4.5
 scikit_learn==0.23.1
 gunicorn==19.9.0
 itsdangerous==1.1.0
-Jinja2==2.10.1
+Jinja2==2.11.3
 MarkupSafe==1.1.1
 Werkzeug==0.15.5
 scipy>=0.15.1
