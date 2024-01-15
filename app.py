@@ -4,7 +4,7 @@ import joblib
 
 
 app = Flask(__name__)
-model = joblib.load(open('model.pkl', 'rb'))
+model = joblib.load(open('model_nb.pkl', 'rb'))
 cv = joblib.load(open('cv.pkl', 'rb'))
 
 
@@ -24,10 +24,13 @@ def predict():
         data = [text]
         vectorizer = cv.transform(data).toarray()
         prediction = model.predict(vectorizer)
-    if prediction:
-        return render_template('index.html', prediction_text='The review is Postive')
+
+        if prediction:
+            return render_template('index.html', review_text=text, prediction_text='The review is Positive')
+        else:
+            return render_template('index.html', review_text=text, prediction_text='The review is Negative.')
     else:
-        return render_template('index.html', prediction_text='The review is Negative.')
+        return render_template('index.html')  # Add this to handle GET requests
 
 
 if __name__ == "__main__":
