@@ -2,6 +2,8 @@
 
 If you want to see the final result this is the link: https://sentiment-analysis-of-reviews.herokuapp.com/
 
+NOTE: The Heroku app is presently unavailable. If you continue with the code and push it to Heroku, you will have a web app; otherwise, you may run it locally by executing the "app.py" file. 
+
 
 # Introduction
 
