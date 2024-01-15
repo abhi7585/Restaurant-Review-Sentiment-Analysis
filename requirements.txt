@@ -1,7 +1,7 @@
 joblib==1.2.0
 numpy==1.22.0
 pandas==1.0.1
-Flask==1.1.1
+Flask==2.3.2
 nltk==3.6.6
 scikit_learn==0.23.1
 gunicorn==19.9.0
