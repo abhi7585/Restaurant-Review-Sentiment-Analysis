@@ -11,3 +11,4 @@ MarkupSafe==1.1.1
 Werkzeug==2.2.3
 scipy>=0.15.1
 matplotlib>=1.4.3
+streamlit==1.30.0
